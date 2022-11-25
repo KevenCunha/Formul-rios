@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="icon" href="img4.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulários</title>
+
+    <style>
+      form {
+          background-color: aliceblue;
+          margin-left: 10%;
+          margin-right: 10%;
+      }
+    </style>
+
+</head>
+
+<body> 
+    <h1>Formulário em HTML</h1>
+    <form action="get"> 
+
+        <fieldset>
+            <legend>Cadastro do Usuário</legend>
+            <label for="cnome"> Nome Completo</label> 
+            <br>
+
+            <input type="text" size="30" id="cnome" required>
+            <br>
+            <br>
+            <p>Cidade</p>
+            <!--type="radio" opção obrigatória de marcar no formulário-->
+            <input checked type="radio" name="cidade" id="poa" value="p">
+            <label for="poa">Porto Alegre</label> 
+            <br>
+            <input type="radio" name="cidade" id="sp" value="sp">
+            <label for="sp">São Paulo</label>
+        </fieldset> <br> <br> 
+
+        <fieldset>
+         <legend>Outras Informações</legend>
+         <p>Qual meio de transporte você usa?</p>
+         <!--Transporte 1-->
+         <!--type="checkbox" opção não obrigatória p/ marcar no formulário-->
+         <input type="checkbox" name="transporte1" id="transporte1">
+         <label for="transporte1"> Bicicleta</label>
+         <br>
+         <!--Fim da Opção Transporte 1-->
+
+         <!--Transporte 2-->
+         <input type="checkbox" name="transporte2" id="transporte2">
+         <label for="transporte2"> Carro</label>
+         <br>
+         <!--Fim da Opção Transporte 2-->
+
+         <!--Transporte 3-->
+         <input type="checkbox" name="transporte3" id="transporte3">
+         <label for="transporte3"> Ônibus</label> 
+         <br>
+         <!--Fim da Opção Transporte 3-->
+
+         <!--for e id tem que estar ligados-->
+         <p>Defina as opções na lista</p>
+         <label for="Período">Período de Trabalho</label>
+         <select name="Período" id="Período">
+         <option value="manha">Manhã</option>
+         <option value="tarde">Tarde</option>
+         <option value="noite">Noite</option>
+         <option value="madrugada">Madrugada</option>
+        </select>
+         <!--option*3 ou qualquer outro número atalho p/ multiplicar a opção-->
+         <br>
+         <br>
+
+         <label for="cComidas">Escolha seu lanche:</label>
+         <input list="comidas" name="#" id="#" placeholder="Insira aqui seu pedido">
+
+         <datalist id="comidas">
+             <option value="MC Brasil"></option>
+             <option value="MC Alemanha"></option>
+             <option value="MC Portugal"></option>
+             <option value="MC Inglaterra"></option>
+             <option value="MC França"></option>
+         </datalist>
+
+         <br><br>
+         <p>Exemplos de Range e Number:</p>
+
+         0 <input type="range"> 100
+         <br>
+         <input type="number" name="#" id="#">
+         <br><br>
+
+         <p style="color: black; font-size: 2em;">Elogios e Críticas:</p> 
+
+         <textarea style="resize: none;" name="#" id="#" cols="60" rows="5"></textarea>
+
+         <br><br>
+
+         <!--submit=botão p/enviar-->
+         <input type="submit" name="#" id="#" value="CADASTRAR">
+        </fieldset>
+    </form>
+    
+</body>
+</html>
